@@ -9,12 +9,12 @@ const data = {
   nodes: [
     { id: "Harry", color: "red", size: 600 },
     { id: "Sally" },
-    { id: "Alice" }
+    { id: "Alice" },
   ],
   links: [
     { source: "Harry", target: "Sally" },
-    { source: "Harry", target: "Alice" }
-  ]
+    { source: "Harry", target: "Alice" },
+  ],
 };
 
 // the graph configuration, you only need to pass down properties
@@ -24,54 +24,54 @@ const myConfig = {
   node: {
     color: "lightgreen",
     size: 120,
-    labelProperty: 'id',
-    highlightStrokeColor: "blue"
+    labelProperty: "id",
+    highlightStrokeColor: "blue",
   },
   link: {
     type: "CURVE_SMOOTH",
-    highlightColor: "lightblue"
-  }
+    highlightColor: "lightblue",
+  },
 };
 
 function App() {
   const onClickGraph = () => {
-    // window.alert(`Clicked the graph background`);
+    console.log(`Clicked the graph background`);
   };
 
-  const onClickNode = nodeId => {
-    // window.alert(`Clicked node ${nodeId}`);
+  const onClickNode = (nodeId) => {
+    console.log(`Clicked node ${nodeId}`);
   };
 
-  const onDoubleClickNode = nodeId => {
-    // window.alert(`Double clicked node ${nodeId}`);
+  const onDoubleClickNode = (nodeId) => {
+    console.log(`Double clicked node ${nodeId}`);
   };
 
   const onRightClickNode = (event, nodeId) => {
-    // window.alert(`Right clicked node ${nodeId}`);
+    console.log(`Right clicked node ${nodeId}`);
   };
 
-  const onMouseOverNode = nodeId => {
-    // window.alert(`Mouse over node ${nodeId}`);
+  const onMouseOverNode = (nodeId) => {
+    console.log(`Mouse over node ${nodeId}`);
   };
 
-  const onMouseOutNode = nodeId => {
-    // window.alert(`Mouse out node ${nodeId}`);
+  const onMouseOutNode = (nodeId) => {
+    console.log(`Mouse out node ${nodeId}`);
   };
 
   const onClickLink = (source, target) => {
-    // window.alert(`Clicked link between ${source} and ${target}`);
+    console.log(`Clicked link between ${source} and ${target}`);
   };
 
   const onRightClickLink = (event, source, target) => {
-    // window.alert(`Right clicked link between ${source} and ${target}`);
+    console.log(`Right clicked link between ${source} and ${target}`);
   };
 
   const onMouseOverLink = (source, target) => {
-    // window.alert(`Mouse over in link between ${source} and ${target}`);
+    console.log(`Mouse over in link between ${source} and ${target}`);
   };
 
   const onMouseOutLink = (source, target) => {
-    // window.alert(`Mouse out link between ${source} and ${target}`);
+    console.log(`Mouse out link between ${source} and ${target}`);
   };
 
   return (
